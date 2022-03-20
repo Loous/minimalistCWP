@@ -1,0 +1,369 @@
+@font-face {
+    font-family: "titulo";
+    src: url(/assets/fonts/title/BebasNeue-Regular.woff2) format("woff2");
+    src: url(/assets/fonts/title/BebasNeue-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face{
+    font-family: "parrafo";
+    src: url(/assets/fonts/parrafos/chivo-light-webfont.woff2) format("woff2");
+    src: url(/assets/fonts/parrafos/chivo-light-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*General style*/
+
+html{
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0 auto;
+    position: relative;
+}
+
+*, ::before, ::after{
+    box-sizing: inherit;
+}
+
+button{
+    background-color: initial;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+
+}
+
+figure{
+    margin: 0;
+}
+
+h1{
+    font-family: "titulo";
+    letter-spacing: 1px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Header style*/
+
+.informacion{
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    align-items: center;
+    column-gap: 40px;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.bs{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+
+}
+
+.carrito{
+    background-image: url(/assets/icons/carrito-de-compras.svg);
+
+}
+
+.cuenta{
+    background-image: url(/assets/icons/usuario.svg);
+}
+
+.sobre{
+    background-image: url(/assets/icons/interrogatorio.svg);
+    
+}
+
+.inf{
+    display: none;
+}
+
+
+
+.menu{
+    height: 1.7rem;
+    width: 2rem;
+    background-image: url(/assets/icons/menu-hamburguesa.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.menuX{
+    background-image: url(/assets/icons/cruzar.svg);
+    background-size: 20px;
+
+}
+
+.search{
+    height: 1.3rem;
+    width: 2rem;
+    background-image: url(/assets/icons/busqueda.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.logo{
+    position: absolute;
+    top: -16px;
+    left: 120px;
+    display: none;
+    
+}
+
+.mainLg:hover{
+    cursor: pointer;
+
+}
+
+/*Main style*/
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    
+}
+
+/*Images style*/
+
+figure{
+    padding: 0;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px rgb(102, 99, 99);
+   
+}
+
+figcaption{
+    margin-top: -3px;
+    text-align: center;
+    border: 1px solid rgb(0,0,0);
+    background-color: rgb(35,50,57);
+    color: rgb(255,255,255);
+    font-size: 1.2rem;
+    font-family: "parrafo";
+    
+   
+    
+}
+
+/*Slice menu styles*/
+
+.sliceMenu{
+    position: absolute;
+    top: 5rem;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255,255,255);
+    transform: translate(0,0);
+    transition: transform 0.7s;
+
+}
+
+.on{
+    transform: translate(-110%, 0);
+}
+
+.sliceMenu ul{
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 10px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.sliceMenu ul li{
+    width: 100%;
+    height: 4rem;
+    border: 2px solid rgb(255,255,255);
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(0,0,0);
+    padding-top: 17px;
+    border: 2px solid rgb(0,0,0);
+    border-radius: 3px;
+    box-shadow: 2px -1px 3px rgb(0,0,0);
+    margin-left: 5px;
+   
+    
+}
+
+.sliceMenu ul li:hover{
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*
+.sliceMenu ul li:hover{
+    background-image: linear-gradient(to top right, rgb(236, 179, 101), rgb(6, 70, 99));
+    color: rgb(255,255,255);
+    transition-property: background-image, color;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+}
+*/
+
+
+/*Media query*/
+
+@media (min-width: 800px) and (max-width: 1199px){
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1{
+        font-size: 3rem;
+        
+    }
+
+    .menu{
+        height: 1.9rem;
+    }
+
+    .search{
+        height: 1.9rem;
+    }    
+
+
+}
+
+@media (min-width: 1200px){
+    main{
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+
+    .informacion{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        column-gap: 20px;
+        
+    }
+
+    .informacion *{
+        flex: 1;
+    }
+
+    .informacion li:nth-child(2){
+        order: -1;
+        margin-left: 5px;
+
+    }
+
+    .inf{
+        display: block;
+    }
+    
+
+    .sliceMenu{
+        display: none;
+    }
+
+    h1{
+        font-size: 3.2rem;
+        
+    }
+    
+    .menu{
+        display: none;
+    }
+
+    figcaption{
+        font-size: 1.3rem;
+
+    }
+
+    .search{
+        display: none;
+    }
+
+    body{
+        background-color: rgb(245,238,220);
+    }
+
+    header{
+        background-color: rgb(152,15,90);
+        border: 1px solid rgb(0,0,0);
+        margin-bottom: 10px;
+    }
+
+    .logo{
+        display: block;
+    }
+
+}
+
+/*Animations*/
+
+/*Mantenimiento*/
+
+.boxMujer{
+    position: relative;
+}
+
+.mantenimiento{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+
+}
+
+.cz{
+    position: absolute;
+    background-color: rgb(255,255,255);
+    width: 100%;
+    height: 20px;
+}
+
+.cruz{
+    top: 140px;
+    transform: skew(0, -30deg);
+}
+
+.cruztwo{
+    top: 140px;
+    transform: skew(0, 30deg);
+}
+
+.mensajeMantenimiento{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    color: rgb(11, 170, 136);
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px rgb(0,0,0);
+}
+

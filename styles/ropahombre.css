@@ -1,0 +1,459 @@
+@font-face{
+    font-family: "rhparrafo";
+    src: url(/assets/fonts/ropahombre/sourcesanspro-regular-webfont.woff2) format("woff2");
+    src: url(/assets/fonts/parrafos/chivo-light-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo{
+    all: initial;
+    width: 155px;
+    height: 155px;
+    position: absolute;
+    top: -16px;
+    left: 120px;
+    display: none;
+}
+
+.mainLg *:hover{
+    cursor: pointer;
+
+}
+
+
+img{
+    border: 1px solid rgb(0,0,0);
+    border-radius: 5px;
+    box-shadow: 1px -2px 5px rgb(0,0,0);
+}
+
+ul{
+    list-style: none;
+    width: 0;
+    padding: 0;
+}
+
+.wrapper{
+    position: relative;
+}
+
+.wrapper li{
+    font-family: "rhparrafo";
+}
+
+.wrapper:hover{
+    cursor: pointer;
+    
+}
+
+.main{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 300px);
+    margin-left: 0;
+    row-gap: 10px;
+    
+    
+    
+}
+
+img{
+    all: initial;
+}
+
+/*Media queries*/
+
+@media (min-width: 800px) and (max-width: 1199px){
+    .main{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5px;
+    }
+    
+}
+
+@media (min-width: 1200px){
+    .main{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    .logo{
+        display: block;
+    }
+    
+}
+
+
+
+/*Img style*/
+
+img{
+    border: 1px solid rgb(0,0,0);
+}
+
+.wrapper{
+    box-shadow: 2px 2px 5px rgb(0,0,0);
+}
+
+/*Description ul styles*/
+
+.sl{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    visibility: hidden;
+   
+    
+}
+
+.sl ul{
+    color: rgb(255,255,255);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    width: 100%;
+
+}
+
+.sl li{
+    margin: 10px 0 0 10px;
+}
+
+
+.onS{
+    visibility: visible;
+   
+}
+
+/*Método pago*/
+
+.box{
+    display: none;
+    background-color: rgb(61, 60, 60);
+    color: rgb(255,255,255);
+}
+
+.mtdP{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+    ". . . . . . ."
+    "im im im im in in in"
+    "im im im im bt . ."
+    "im im im im . . ."
+    ". . . . . . .";
+
+    border: 2px solid rgb(0,0,0);
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+
+    
+}
+
+.principal{
+    grid-area: im;
+    justify-self: center;
+
+
+}
+
+.description{
+    grid-area: in;
+    width: 100%;
+    justify-self: center;
+    
+}
+
+.description li{
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.buy{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255,255,255);
+    text-align: center;
+    font-size: 1.3rem;
+    padding-top: 16px;
+    letter-spacing: 1px;
+    border: 2px solid rgb(255,255,255);
+    width: 14rem;
+
+    grid-area: bt;
+}
+
+.buy:hover{
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+
+    transition: 0.4s;
+
+}
+
+/*Metodo pago*/
+
+.mtd{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: 
+    ". pg pg pg pg pg pg . . x"
+    ". pg pg pg pg pg pg . . ."
+    ". . . . . . . . . ."
+    ". . . . . . . . . ."
+    ". . . . . . . . . ."
+    ". . . . . . . . . .";
+    margin-top: -10px;
+
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border: 2px solid rgb(0,0,0);
+    background-color: rgba(0,0,0,.3);
+    display: none;
+}
+
+.metodopago{
+    grid-area: pg;
+    margin-top: 30px;
+
+}
+
+.pago{
+    border: 2px solid rgb(0,0,0);
+    height: 60%;
+    background-color: rgb(68, 6, 6);
+    
+}
+
+.pago input,
+.pago select{
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 2px;
+}
+
+
+.cancel{
+    grid-area: x;
+
+    font-size: 1.5rem;
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: rgb(173, 20, 20);
+    font-weight: bold;
+    background-color: rgb(255,255,255);
+    border-radius: 20px;
+    width: 2rem;
+    padding: 0 2px 4px 2px;
+    
+}
+
+.confirmar{
+    border: 2px solid rgb(255,255,255);
+    width: 100%;
+    height: 2rem;
+    color: rgb(255,255,255);
+    font-size: 1.3rem;
+    background-color: rgb(0,0,0);
+
+}
+
+.confirmar:hover{
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    border: 2px solid rgb(0,0,0);
+    transition: 0.3s;
+
+}
+
+/*Formulario estilos*/
+
+.pago{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: 
+    ". . . . . . . . . ."
+    "vs vs vs vs . nt nt nt nt nt"
+    "ma ma ma ma . tl tl tl tl tl"
+    "x x x x x x x x x x"
+    ". . cn cn cn cn cn cn . .";
+    padding: 50px;
+}
+
+.ts{
+    background-color: initial;
+    border: none;
+    border-bottom: 2px solid rgb(0,0,0);
+    outline: none;
+    font-size: 1rem;
+    caret-color: rgb(0, 255, 255);
+    color: rgb(255,255,255);
+    
+
+}
+
+.ts::placeholder{
+    font-size: 1rem;
+}
+
+.tarjeta{
+    grid-area: vs;
+}
+
+.numeroT{
+    grid-area: nt;
+}
+
+.mmaa{
+    grid-area: ma;
+}
+
+.tarjetaTitular{
+    grid-area: tl;
+    
+}
+
+.trX{
+    grid-area: x;
+}
+
+.confirmarBtn{
+    grid-area: cn;
+}
+
+.btnCf{
+    border: 2px solid rgb(0,0,0);
+    width: 100%;
+    color: rgb(226, 213, 213);
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: rgb(90,0,0);
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+}
+
+.btnCf:hover{
+    background-color: rgb(156, 6, 6);
+    transition: background-color 0.3s;
+}
+
+/**/
+
+.ts::placeholder{
+    color: rgb(255,255,255);
+}
+
+/*Invalid value styles*/
+
+.tarjetaN:invalid,
+.fechaC:invalid,
+.titularT:invalid,
+.xxxT:invalid{
+    border-bottom-color: rgb(255,0,0);
+}
+
+/*Valid value styles*/
+
+.tarjetaN:valid,
+.fechaC:valid,
+.titularT:valid,
+.xxxT:valid{
+    border-bottom-color: rgb(12, 192, 21);
+}
+
+/*Slice menu styles*/
+
+.sliceMenu ul{
+    width: 100%;
+}
+
+.sliceMenu{
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
