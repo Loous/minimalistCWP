@@ -6,7 +6,7 @@ minimalist web page about clothes
 
 # alert
 
-This is a demostrative project, if you are owner of some image you can tell me
+This is a demostrative project, if you are owner of some image you can tell me and I put off it
 
 # contact
 
